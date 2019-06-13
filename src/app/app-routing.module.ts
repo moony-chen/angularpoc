@@ -4,7 +4,7 @@ import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "contacts", loadChildren: "./contacts/contacts.module" },
+  { path: "contacts", loadChildren: () => import('./contacts/contacts.module').then(m => m.default) },
   {
     path: "orders",
     loadChildren: () =>
