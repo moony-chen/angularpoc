@@ -13,7 +13,9 @@ import { Message } from "@angular/compiler/src/i18n/i18n_ast";
       (mouseup)="isMouseDown = false"
       (mouseleave)="isMouseDown = false"
     />
-    <button (click)="update.emit({ text: message })">Click me</button>
+    <button class="button primary" (click)="update.emit({ text: message })">
+      Click me
+    </button>
   `,
   styles: [
     `
