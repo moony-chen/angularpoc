@@ -12,6 +12,7 @@ import { StoreModule } from "@ngrx/store";
 import { reducers, metaReducers } from "./reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../environments/environment";
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [AppComponent, SimpleFormComponent, HomeComponent],
@@ -20,6 +21,7 @@ import { environment } from "../environments/environment";
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    DataTablesModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
