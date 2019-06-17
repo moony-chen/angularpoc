@@ -14,7 +14,8 @@ export class AppComponent {
     { url: "contacts", title: "Contacts" },
     { url: "contacts/1", title: "One" },
     { url: "orders", title: "Orders" },
-    { url: "clock", title: "Clock" }
+    { url: "clock", title: "Clock" },
+    { url: "customform", title: "Custom Form" }
   ];
 
   constructor(@Inject("mail") private mail) {}

@@ -1,3 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/css/main.css"
 @import "./assets/css/customer.css"
+
+    formly-wrapper-form-field .form-group {
+        display: flex;
+        flex-direction: row;
+      }
+
+select {
+    border: 0;
+    border-bottom: 1px dotted #000;
+    background: url("/assets/img/icons/down.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 25px;
+    cursor: pointer;
+    padding: 0 10px;
+    height: 25px;
+    text-indent: 0.01px;
+    text-overflow: "";
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select:focus {
+    border: none;
+}

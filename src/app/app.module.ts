@@ -13,9 +13,20 @@ import { reducers, metaReducers } from "./reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../environments/environment";
 import { DataTablesModule } from "angular-datatables";
+import { CustomFormComponent } from "./custom-form/custom-form.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { FormlyModule } from "@ngx-formly/core";
+import { FormlyBootstrapModule } from "@ngx-formly/bootstrap";
+import { CustomFormFieldCheckbox } from "./custom-form/custom-form-checkbox";
 
 @NgModule({
-  declarations: [AppComponent, SimpleFormComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    SimpleFormComponent,
+    HomeComponent,
+    CustomFormComponent,
+    CustomFormFieldCheckbox
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +37,12 @@ import { DataTablesModule } from "angular-datatables";
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
-    })
+    }),
+    ReactiveFormsModule,
+    FormlyModule.forRoot({
+      types: [{ name: "checkbox", component: CustomFormFieldCheckbox }]
+    }),
+    FormlyBootstrapModule
   ],
   providers: [{ provide: "mail", useClass: MailService }],
   bootstrap: [AppComponent]
