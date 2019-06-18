@@ -30,6 +30,13 @@ import { FormlyFormOptions, FormlyFieldConfig } from "@ngx-formly/core";
         [options]="options"
         [form]="form"
       ></formly-form>
+
+      <input
+        type="text"
+        placeholder="Datepicker"
+        bsDatepicker
+        [bsConfig]="{ containerClass: 'theme-audi' }"
+      />
       <button type="submit" class="btn btn-primary submit-button">
         Submit
       </button>

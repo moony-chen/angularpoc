@@ -1,0 +1,99 @@
+/* .bs-datepicker */
+.theme-audi.bs-datepicker {
+    background: #fff;
+    font-family: 'Audi Type';
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 1px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-audi .bs-datepicker-head {
+    min-width: 200px;
+    border: 1px solid #e9edf0;
+    border-bottom: 0;
+    padding: 0 10px 5px;
+    height: 30px;
+}
+
+.theme-audi .bs-datepicker-head button {
+    color: #000;
+}
+
+.theme-audi .bs-datepicker-head button.current span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.theme-audi .bs-datepicker-body {
+    padding: 0;
+    border-radius: 0 0 3px 3px;
+    min-height: 232px;
+    min-width: 208px;
+    border: 0;
+    /* .bs-datepicker-body table */
+}
+
+.theme-audi .bs-datepicker-body table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* .bs-datepicker-body table.days */
+    /* .bs-datepicker-body table.weeks */
+}
+
+.theme-audi .bs-datepicker-body table thead {
+    border-top: 0;
+    border-bottom: 1px solid #e9edf0;
+    background-color: #fff;
+}
+
+.theme-audi .bs-datepicker-body table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.theme-audi .bs-datepicker-body table th {
+    font-size: 13px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem 0.25rem 0.625rem;
+}
+
+.theme-audi .bs-datepicker-body table td {
+    color: #000;
+    text-align: center;
+    position: relative;
+    padding: 0;
+}
+
+.theme-audi bs-datepicker-navigation-view {
+    display: flex;
+    justify-content: center;
+}
+
+.theme-audi .bs-datepicker-body table td span {
+    display: block;
+    margin: 0 auto;
+    font-size: 13px;
+    border-radius: 0;
+}
+
+.theme-audi .bs-datepicker-container {
+    padding: 4px;
+}
+
+.theme-audi .bs-datepicker-head {
+    background-color: #fff;
+}
+
+.theme-audi .bs-datepicker-body table td span.selected,
+.theme-audi .bs-datepicker-body table td.selected span,
+.theme-audi .bs-datepicker-body table td span[class*="select-"]:after,
+.theme-audi .bs-datepicker-body table td[class*="select-"] span:after {
+    background-color: #2ba6cb;
+}
+
+.theme-audi .bs-datepicker-body table td.week span {
+    color: #fff;
+}

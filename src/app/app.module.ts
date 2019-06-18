@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { FormlyModule } from "@ngx-formly/core";
 import { FormlyBootstrapModule } from "@ngx-formly/bootstrap";
 import { CustomFormFieldCheckbox } from "./custom-form/custom-form-checkbox";
+import { BsDatepickerModule } from "ngx-foundation";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CustomFormFieldCheckbox } from "./custom-form/custom-form-checkbox";
     FormlyModule.forRoot({
       types: [{ name: "checkbox", component: CustomFormFieldCheckbox }]
     }),
-    FormlyBootstrapModule
+    FormlyBootstrapModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [{ provide: "mail", useClass: MailService }],
   bootstrap: [AppComponent]
