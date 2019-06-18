@@ -31,12 +31,6 @@ import { FormlyFormOptions, FormlyFieldConfig } from "@ngx-formly/core";
         [form]="form"
       ></formly-form>
 
-      <input
-        type="text"
-        placeholder="Datepicker"
-        bsDatepicker
-        [bsConfig]="{ containerClass: 'theme-audi' }"
-      />
       <button type="submit" class="btn btn-primary submit-button">
         Submit
       </button>
@@ -62,7 +56,8 @@ export class CustomFormComponent implements OnInit {
   form = new FormGroup({});
   model: any = {
     city: 2,
-    employee: [2, 3]
+    employee: [2, 3],
+    dob: new Date()
   };
   options: FormlyFormOptions = {
     formState: {
@@ -128,7 +123,7 @@ export class CustomFormComponent implements OnInit {
     },
     {
       key: "dob",
-      type: "input",
+      type: "datepicker",
       templateOptions: {
         label: "Date of Birth",
         type: "date",

@@ -1,4 +1,10 @@
 /* .bs-datepicker */
+
+.bs-datepicker-input {
+    background-color: transparent !important;
+    cursor: auto !important;
+}
+
 .theme-audi.bs-datepicker {
     background: #fff;
     font-family: 'Audi Type';

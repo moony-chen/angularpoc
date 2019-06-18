@@ -19,6 +19,7 @@ import { FormlyModule } from "@ngx-formly/core";
 import { FormlyBootstrapModule } from "@ngx-formly/bootstrap";
 import { CustomFormFieldCheckbox } from "./custom-form/custom-form-checkbox";
 import { BsDatepickerModule } from "ngx-foundation";
+import { CustomFormFieldDatePicker } from "./custom-form/custom-form-datepicker";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BsDatepickerModule } from "ngx-foundation";
     SimpleFormComponent,
     HomeComponent,
     CustomFormComponent,
-    CustomFormFieldCheckbox
+    CustomFormFieldCheckbox,
+    CustomFormFieldDatePicker
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,14 @@ import { BsDatepickerModule } from "ngx-foundation";
     }),
     ReactiveFormsModule,
     FormlyModule.forRoot({
-      types: [{ name: "checkbox", component: CustomFormFieldCheckbox }]
+      types: [
+        { name: "checkbox", component: CustomFormFieldCheckbox },
+        {
+          name: "datepicker",
+          component: CustomFormFieldDatePicker,
+          wrappers: ["form-field"]
+        }
+      ]
     }),
     FormlyBootstrapModule,
     BsDatepickerModule.forRoot()

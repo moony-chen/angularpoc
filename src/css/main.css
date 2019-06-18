@@ -6422,21 +6422,21 @@ hr {
 
 @font-face {
     font-family: "Audi Type Ext Bold";
-    src: url("../fonts/0d9df420-76ab-40a9-ae57-2461c1c6ab6d.eot?iefix") format("eot");
-    src: url("../fonts/a3c162ba-a8e8-4fc5-93d6-86d391105a57.woff") format("woff"), url("../fonts/68930f0b-94a1-4c0e-a5ae-f8e3ad3b49a7.ttf") format("truetype"), url("../fonts/e26927bb-0f7e-450e-87af-b5220869dd73.svg#e26927bb-0f7e-450e-87af-b5220869dd73") format("svg");
+    src: url("../assets/fonts/0d9df420-76ab-40a9-ae57-2461c1c6ab6d.eot?iefix") format("eot");
+    src: url("../assets/fonts/a3c162ba-a8e8-4fc5-93d6-86d391105a57.woff") format("woff"), url("../assets/fonts/68930f0b-94a1-4c0e-a5ae-f8e3ad3b49a7.ttf") format("truetype"), url("../assets/fonts/e26927bb-0f7e-450e-87af-b5220869dd73.svg#e26927bb-0f7e-450e-87af-b5220869dd73") format("svg");
 }
 
 @font-face {
     font-family: "Audi Type";
-    src: url("../fonts/9e07819d-c2a7-4f2b-9e8b-92ae7c9262af.eot?iefix") format("eot");
-    src: url("../fonts/de0b8bf6-ca0d-4839-818b-92bddb44eaeb.woff") format("woff"), url("../fonts/2dff57d8-d77c-4537-a78d-e9e48578607a.ttf") format("truetype"), url("../fonts/610030f6-5069-47ac-99dd-76f20cdb0fac.svg#610030f6-5069-47ac-99dd-76f20cdb0fac") format("svg");
+    src: url("../assets/fonts/9e07819d-c2a7-4f2b-9e8b-92ae7c9262af.eot?iefix") format("eot");
+    src: url("../assets/fonts/de0b8bf6-ca0d-4839-818b-92bddb44eaeb.woff") format("woff"), url("../assets/fonts/2dff57d8-d77c-4537-a78d-e9e48578607a.ttf") format("truetype"), url("../assets/fonts/610030f6-5069-47ac-99dd-76f20cdb0fac.svg#610030f6-5069-47ac-99dd-76f20cdb0fac") format("svg");
 }
 
 @font-face {
     font-family: "Audi Type";
     font-weight: bold;
-    src: url("../fonts/c719eda5-e635-40fd-8b1c-869ba391dfff.eot?iefix") format("eot");
-    src: url("../fonts/34d005d1-9444-4a58-af68-4f73c4939ce0.woff") format("woff"), url("../fonts/e6b424cc-7cd0-44d3-8bcb-ab7ee5c5ae1a.ttf") format("truetype"), url("../fonts/f7789a38-da66-4f5f-b33f-9084cd6727c8.svg#f7789a38-da66-4f5f-b33f-9084cd6727c8") format("svg");
+    src: url("../assets/fonts/c719eda5-e635-40fd-8b1c-869ba391dfff.eot?iefix") format("eot");
+    src: url("../assets/fonts/34d005d1-9444-4a58-af68-4f73c4939ce0.woff") format("woff"), url("../assets/fonts/e6b424cc-7cd0-44d3-8bcb-ab7ee5c5ae1a.ttf") format("truetype"), url("../assets/fonts/f7789a38-da66-4f5f-b33f-9084cd6727c8.svg#f7789a38-da66-4f5f-b33f-9084cd6727c8") format("svg");
 }
 
 .button {
