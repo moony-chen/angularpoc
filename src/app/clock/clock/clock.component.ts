@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Subject, Observable, merge, interval } from "rxjs";
 import { Store, select } from "@ngrx/store";
 import { addHour, addSecond } from "./clock.actions";
@@ -15,7 +15,7 @@ import { mapTo, map } from "rxjs/operators";
   `,
   styles: []
 })
-export class ClockComponent implements OnInit {
+export class ClockComponent implements OnInit, OnDestroy {
   click$ = new Subject().pipe(
     map((value: string) => ({
       action: addHour,
@@ -26,13 +26,18 @@ export class ClockComponent implements OnInit {
     mapTo({ action: addSecond, payload: { unit: 1 } })
   );
   clock;
+  sub;
 
   constructor(private store: Store<{ clock: Date }>) {
     this.clock = store.pipe(select("clock"));
-    merge(this.click$, this.seconds$).subscribe(({ action, payload }) =>
-      store.dispatch(action(payload))
+    this.sub = merge(this.click$, this.seconds$).subscribe(
+      ({ action, payload }) => store.dispatch(action(payload))
     );
   }
 
   ngOnInit() {}
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }

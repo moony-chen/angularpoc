@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { FieldType } from "@ngx-formly/core";
+import { startWith } from "rxjs/operators";
 
 @Component({
   selector: "formly-field-checkbox",
@@ -12,29 +13,39 @@ import { FieldType } from "@ngx-formly/core";
         type="checkbox"
         class="value"
         [(ngModel)]="data[i]"
-        (change)="onChange()"
+        (change)="onCheck()"
       />
       <span></span> {{ o.label }}
     </label>
   `
 })
-export class CustomFormFieldCheckbox extends FieldType implements OnInit {
+export class CustomFormFieldCheckbox extends FieldType
+  implements OnInit, OnDestroy {
   checkboxOptions;
   data = [];
+  unsub;
 
   ngOnInit() {
     this.checkboxOptions = this.field.templateOptions.options;
-    let values: any[] = this.formControl.value;
-    this.data = this.checkboxOptions.map(
-      o => !!values.find(v => v === o.value)
-    );
+    this.unsub = this.formControl.valueChanges
+      .pipe(startWith(this.formControl.value))
+      .subscribe(
+        vs =>
+          (this.data = this.checkboxOptions.map(
+            o => !!vs.find(v => v === o.value)
+          ))
+      );
   }
 
-  onChange() {
+  onCheck() {
     this.formControl.setValue(
       this.data
         .map((d, index) => (d ? this.checkboxOptions[index].value : null))
         .filter(f => !!f)
     );
+  }
+
+  ngOnDestroy() {
+    this.unsub.unsubscribe();
   }
 }
