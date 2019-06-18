@@ -109,6 +109,25 @@ export class CustomFormComponent implements OnInit {
           { value: 4, label: "Option 4" }
         ]
       }
+    },
+    {
+      key: "description",
+      type: "textarea",
+      templateOptions: {
+        label: "Description",
+        rows: 3,
+        cols: 20
+      }
+    },
+    {
+      key: "dob",
+      type: "input",
+      templateOptions: {
+        label: "Date of Birth",
+        type: "date",
+        placeholder: "How old are u",
+        required: false
+      }
     }
   ];
 
