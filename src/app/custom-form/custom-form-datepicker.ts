@@ -11,10 +11,9 @@ import { FieldType } from "@ngx-formly/core";
       bsDatepicker
       [formControl]="formControl"
       [formlyAttributes]="field"
-      [bsConfig]="{ containerClass: 'theme-audi' }"
+      [bsConfig]="bsConfig"
       readonly="readonly"
     />
-    {{ this.data }}
   `
 })
 export class CustomFormFieldDatePicker extends FieldType
@@ -22,9 +21,13 @@ export class CustomFormFieldDatePicker extends FieldType
   pickerOptions;
   data;
   unsub;
+  bsConfig;
 
   ngOnInit() {
-    this.pickerOptions = (this.field.templateOptions.options || [])[0];
+    this.pickerOptions = (this.field.templateOptions.options || [])[0] || {};
+    this.bsConfig = Object.assign({}, this.pickerOptions.bsConfig || {}, {
+      containerClass: "theme-audi"
+    });
     // this.unsub = this.formControl.valueChanges
     //   .pipe(startWith(this.formControl.value))
     //   .subscribe(vs => (this.data = vs));
